@@ -60,7 +60,6 @@ for _, v in pairs(game:GetService("Workspace"):FindFirstChild("__THINGS").__INST
     end
 end
 
--- game:GetService("Workspace").__THINGS.__INSTANCE_CONTAINER.Active.Digsite:WaitForChild("Important").Merchant:Destroy()
 game:GetService("Workspace"):WaitForChild("ALWAYS_RENDERING"):Destroy()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fdvll/pet-simulator-99/main/cpuReducer.lua"))()
@@ -113,10 +112,10 @@ while getgenv().autoDigsite do
 
     if chest then
         game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = chest.Top.CFrame
-        game:GetService("ReplicatedStorage").Network:WaitForChild("Instancing_FireCustomFromClient"):FireServer("Digsite", "DigChest", chest:GetAttribute('Coord'))
+        game:GetService("ReplicatedStorage").Network:WaitForChild("Instancing_FireCustomFromClient"):FireServer("advancedigsite", "DigChest", chest:GetAttribute('Coord'))
     elseif block then
         game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = block.CFrame
-        game:GetService("ReplicatedStorage").Network:WaitForChild("Instancing_FireCustomFromClient"):FireServer("Digsite", "DigBlock", block:GetAttribute('Coord'))
+        game:GetService("ReplicatedStorage").Network:WaitForChild("Instancing_FireCustomFromClient"):FireServer("advancedigsite", "DigBlock", block:GetAttribute('Coord'))
     end
     task.wait()
 end
