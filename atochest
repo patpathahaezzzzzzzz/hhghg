@@ -21,7 +21,7 @@ else
 end
 
 -- Teleport to the dig site entrance
-game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game:GetService("Workspace").AdvanceDigsite.TeleportEntrance.CFrame
+game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = game:GetService("Workspace").Digsite.TeleportEntrance.CFrame
 
 -- Define functions to find blocks and chests
 local function findBlock()
